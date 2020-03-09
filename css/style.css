@@ -1,9 +1,133 @@
+:root{
+    --fundo: #e7f1fa;
+    --texto: #373737;
+    --light: #ffffff;
+    --shadow: #c7d2db;
+    --omelete: #ffc20e;
+}
 *{
     margin: 0;
     padding: 0;
 }
-
 body{
-    background-color: #F2F5FF;
-    
+    background-color:  var(--fundo);
+    color: var(--texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+a{
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 1.4em;
+}
+img{
+    width: 100%;
+}
+h1, h2, h3, h4, h5,h6{
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+.bnt{ /*para o botão*/
+    padding: 0.5em 0.7em;
+}
+.rounded{ /*para deixar a borda arredondada*/
+    border-radius:10px ;
+}
+.circle{
+    border-radius: 50%;
+}
+.shadow{
+    box-shadow: 6px 6px 10px var(--shadow), -6px -6px 10px var(--light) ;
+}
+.inner, shadow:hover, .shadow:active{ /*para fazer o efeito neumorphism*/
+    box-shadow: 6px 6px 10px var(--shadow), -6px -6px 10px var(--light) ;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+header img{
+    width: 120px;
+    filter: drop-shadow(1px 1px 2x rgba(255, 195, 14, 0.5)); /*um filtro*/
+}
+
+#menu{
+    background-color: var(--fundo);
+    position: absolute;
+    top: 80px; /*80px pq é o tamanho do header*/
+    width: 60%;
+    left: 0; /*para ficar encostado no canto esquerdo*/
+    padding: 2em 3em;
+    display: none;
+}
+#menu ul li, #menu ul a{
+    list-style: none;
+    padding: 10px 10em 10px 0; /*para que o link tenha espaçamento para a esquerda, quem faz isso é o 10em*/
+}
+.top_sociais{
+    display: none;
+}
+main section{
+    max-width: 80%;
+    margin: 0 auto;
+}
+h2{
+    width: 80%;
+    margin: 1em auto;
+}
+.card{
+    margin: 2em 0;
+}
+.card img{
+    margin-top: 8px;
+    box-shadow: 6px 6px 10px var(--shadow), -6px -6px 10px var(--light);
+}
+footer{
+    padding: 2em 0;
+}
+footer ul{
+    list-style: none;
+    font-size: 0.7em;
+    padding: 2em;
+}
+footer h4{
+    text-align: left;
+}
+.links{
+    margin: 2em 0;   
+}
+.sociais{
+    display: flex;
+    justify-content: space-around;
+}
+.sociais a{
+    color: var(--omelete);
+    text-shadow: 1px 1px 2px var(--shadow);
+}
+.direitos{
+   display: flex;
+   justify-content: center;
+   margin: auto";
+}
+/*fim do mobile*/
+@media (min-width: 769px){ /*tablet*/
+    .card{
+        display: flex;
+
+    }
+    .card img{
+        width: 30%;
+    }
+    .card p{
+        margin: 0 5px;
+    }
+}
+@media (min-width: 1201px){
+
 }
